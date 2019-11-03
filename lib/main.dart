@@ -94,9 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             RandomWords(),
             Text(
-              ', You have pushed the button this many times:',
-            ),
-            Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
@@ -121,6 +118,6 @@ class RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
     final wordPair = WordPair.random();
-    return Text(wordPair.asPascalCase);
+    return Text(wordPair.asPascalCase + ', You have pushed the button this many times:');
   }
 }
